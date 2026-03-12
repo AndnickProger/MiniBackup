@@ -27,30 +27,25 @@ markdown
 sudo apt-get update
 sudo apt-get install build-essential cmake libboost-all-dev libzstd-dev libsqlite3-dev
 
-Используйте код с осторожностью.
 Компиляция (Release-билд)
 bash
 mkdir build_release && cd build_release
 cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build . -j$(nproc)
 
-Используйте код с осторожностью.
 Использование
 bash
 ./mini_backup <путь_источник> <путь_назначение> <файл_бд> [кол-во_потоков]
 
-Используйте код с осторожностью.
 Пример:
 bash
 ./mini_backup ./data ./backups ./metadata.db 4
 
-Используйте код с осторожностью.
 🧪 Тестирование
 Для запуска автоматизированных тестов (на базе Boost.Test) выполните:
 bash
 ./run_tests
 
-Используйте код с осторожностью.
 Тесты проверяют:
     Полноту цикла создания бэкапа.
     Корректность работы инкрементальной логики (пропуск неизмененных файлов).
